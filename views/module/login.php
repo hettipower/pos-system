@@ -19,6 +19,10 @@
                     <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
                 </div>
             </div>
+            <?php
+                $login = new UserController();
+                $login->ctrUserLogin();
+            ?>
         </form>
 
     </div>
