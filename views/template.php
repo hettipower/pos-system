@@ -29,31 +29,31 @@
   <script src="views/dist/js/adminlte.min.js"></script>
 
 </head>
-<body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper">
+<body class="hold-transition <?php echo ( isset($_SESSION['beginSession']) && $_SESSION['beginSession'] == 'ok' ) ? 'skin-blue sidebar-collapse sidebar-mini' : 'login-page' ; ?>">
 
   <?php
-    include "module/header.php";
-    include "module/menu.php";
+    if( isset($_SESSION['beginSession']) && $_SESSION['beginSession'] == 'ok' ){
+      echo '<div class="wrapper">';
+      include "module/header.php";
+      include "module/menu.php";
 
-    if( isset($_GET['route']) ){
-      if( $_GET['route'] == 'home' || $_GET['route'] == 'users' || $_GET['route'] == 'categories' || $_GET['route'] == 'products' || $_GET['route'] == 'clients' || $_GET['route'] == 'sales' || $_GET['route'] == 'create-sales' || $_GET['route'] == 'reports' ){
-        include "module/".$_GET['route'].".php";
+      if( isset($_GET['route']) ){
+        if( $_GET['route'] == 'home' || $_GET['route'] == 'users' || $_GET['route'] == 'categories' || $_GET['route'] == 'products' || $_GET['route'] == 'clients' || $_GET['route'] == 'sales' || $_GET['route'] == 'create-sales' || $_GET['route'] == 'reports' ){
+          include "module/".$_GET['route'].".php";
+        }else{
+          include "module/404.php";
+        }
       }else{
-        include "module/404.php";
+        include "module/home.php";
       }
+
+      include "module/footer.php";
+      echo '</div>';
     }else{
-      include "module/home.php";
+      include "module/login.php";
     }
-
-    include "module/footer.php";
+    
   ?>
-
-  <!-- =============================================== -->
-
-</div>
-<!-- ./wrapper -->
 
 <script src="views/js/template.js"></script>
 </body>
