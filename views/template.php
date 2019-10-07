@@ -36,7 +36,13 @@
   <?php
     include "module/header.php";
     include "module/menu.php";
-    include "module/content.php";
+
+    if( isset($_GET['route']) ){
+      if( $_GET['route'] == 'home' || $_GET['route'] == 'users' || $_GET['route'] == 'categories' || $_GET['route'] == 'products' || $_GET['route'] == 'clients' || $_GET['route'] == 'sales' || $_GET['route'] == 'create-sales' || $_GET['route'] == 'reports' ){
+        include "module/".$_GET['route'].".php";
+      }
+    }
+
     include "module/footer.php";
   ?>
 
