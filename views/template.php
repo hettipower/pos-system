@@ -40,7 +40,11 @@
     if( isset($_GET['route']) ){
       if( $_GET['route'] == 'home' || $_GET['route'] == 'users' || $_GET['route'] == 'categories' || $_GET['route'] == 'products' || $_GET['route'] == 'clients' || $_GET['route'] == 'sales' || $_GET['route'] == 'create-sales' || $_GET['route'] == 'reports' ){
         include "module/".$_GET['route'].".php";
+      }else{
+        include "module/404.php";
       }
+    }else{
+      include "module/home.php";
     }
 
     include "module/footer.php";
