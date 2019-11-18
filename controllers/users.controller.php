@@ -9,9 +9,14 @@ class UserController{
                 $item = 'username';
                 $value = $_POST['sysUser'];
 
-                $reply = ModuleUsers::MdlShowUsers($table , $item , $value);
+                $respond = ModuleUsers::MdlShowUsers($table , $item , $value);
 
-                var_dump($reply);
+                if( $respond['username'] == $_POST['sysUser'] && $respond['password'] == $_POST['sysPassword'] ){
+                    $_SESSION['beginSession'] = 'ok';
+                    echo '<script>window.location = "home";</script>';
+                }else{
+                    echo '<br/><div class="alert alert-danger">Error on login. Please try again.alias</div>';
+                }
             }
         }
     }
