@@ -17,8 +17,8 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="./views/img/users/user2-160x160.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs">Alexander Pierce</span>
+                        <img src="<?php echo ( isset($_SESSION["picture"]) && !empty($_SESSION["picture"]) ) ? $_SESSION["picture"] : './views/img/users/default/anonymous.png' ; ?>" class="user-image" alt="User Image">
+                        <span class="hidden-xs"><?php echo ( isset($_SESSION["name"]) && !empty($_SESSION["name"]) ) ? $_SESSION["name"] : '' ; ?></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- Menu Footer-->
