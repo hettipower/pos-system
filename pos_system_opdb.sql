@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2019 at 01:33 PM
+-- Generation Time: Nov 18, 2019 at 11:52 AM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.1.29
 
@@ -35,7 +35,7 @@ CREATE TABLE `users` (
   `password` text NOT NULL,
   `profile` text NOT NULL,
   `picture` text NOT NULL,
-  `state` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
   `last_login` datetime NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -44,8 +44,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `username`, `password`, `profile`, `picture`, `state`, `last_login`, `date`) VALUES
-(1, 'User Administrator', 'admin', 'admin123', 'Administrator', '', 1, '0000-00-00 00:00:00', '2019-10-07 09:30:16');
+INSERT INTO `users` (`id`, `name`, `username`, `password`, `profile`, `picture`, `status`, `last_login`, `date`) VALUES
+(3, 'Administator', 'admin', '$2a$07$asxx54ahjppf45sd87a5aunxs9bkpyGmGE/.vekdjFg83yRec789S', 'administrator', 'views/img/users/admin/179.jpg', 1, '2019-11-18 15:30:14', '2019-11-18 10:00:14');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +65,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
