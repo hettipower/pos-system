@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2019 at 11:52 AM
+-- Generation Time: Nov 19, 2019 at 10:32 AM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.1.29
 
@@ -21,6 +21,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `pos_system_opdb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL,
+  `Category` text NOT NULL,
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `Category`, `Date`) VALUES
+(2, 'ELECTROMECHANICAL EQUIPMENT', '2019-11-19 09:16:30'),
+(3, 'DRILLS', '2019-11-19 09:17:50'),
+(4, 'SCAFFOLDING', '2019-11-19 09:18:03'),
+(5, 'POWER GENERATORS', '2019-11-19 09:18:20'),
+(6, 'CONSTRUCTION EQUIPMENT', '2019-11-19 09:18:34');
 
 -- --------------------------------------------------------
 
@@ -45,11 +68,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `profile`, `picture`, `status`, `last_login`, `date`) VALUES
-(3, 'Administator', 'admin', '$2a$07$asxx54ahjppf45sd87a5aunxs9bkpyGmGE/.vekdjFg83yRec789S', 'administrator', 'views/img/users/admin/179.jpg', 1, '2019-11-18 15:30:14', '2019-11-18 10:00:14');
+(3, 'Administator', 'admin', '$2a$07$asxx54ahjppf45sd87a5aunxs9bkpyGmGE/.vekdjFg83yRec789S', 'administrator', 'views/img/users/admin/179.jpg', 1, '2019-11-18 15:30:14', '2019-11-19 02:13:36');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -60,6 +89,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
