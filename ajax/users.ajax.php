@@ -1,7 +1,7 @@
 <?php
 
 require_once "../controllers/users.controller.php";
-require_once "../models/users.model.php";
+require_once "../modules/users.module.php";
 
 class AjaxUsers{
 
