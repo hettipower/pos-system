@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2019 at 10:32 AM
+-- Generation Time: Nov 20, 2019 at 10:00 AM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.1.29
 
@@ -48,6 +48,25 @@ INSERT INTO `categories` (`id`, `Category`, `Date`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `idCategory` int(11) NOT NULL,
+  `code` text NOT NULL,
+  `description` text NOT NULL,
+  `image` text NOT NULL,
+  `stock` int(11) NOT NULL,
+  `buyingPrice` float NOT NULL,
+  `sellingPrice` float NOT NULL,
+  `sales` int(11) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -81,6 +100,12 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -95,6 +120,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
