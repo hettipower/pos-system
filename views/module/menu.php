@@ -24,8 +24,8 @@
                 </a>
             </li>
             <li>
-                <a href="clients">
-                    <i class="fa fa-users"></i> <span>Clients</span>
+                <a href="customers">
+                    <i class="fa fa-users"></i> <span>Customers</span>
                 </a>
             </li>
             <li class="treeview">

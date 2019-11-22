@@ -44,6 +44,10 @@
   <script src="views/plugins/sweetalert2/sweetalert2.min.js"></script>
   <!-- iCheck 1.0.1 -->
   <script src="views/plugins/iCheck/icheck.min.js"></script>
+  <!-- InputMask -->
+  <script src="views/plugins/input-mask/jquery.inputmask.js"></script>
+  <script src="views/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+  <script src="views/plugins/input-mask/jquery.inputmask.extensions.js"></script>
 
 </head>
 <body class="hold-transition <?php echo ( isset($_SESSION['beginSession']) && $_SESSION['beginSession'] == 'ok' ) ? 'skin-blue sidebar-collapse sidebar-mini' : 'login-page' ; ?>">
@@ -60,7 +64,7 @@
           $_GET['route'] == 'users' || 
           $_GET['route'] == 'categories' || 
           $_GET['route'] == 'products' || 
-          $_GET['route'] == 'clients' || 
+          $_GET['route'] == 'customers' || 
           $_GET['route'] == 'sales' || 
           $_GET['route'] == 'create-sales' || 
           $_GET['route'] == 'reports' ||
