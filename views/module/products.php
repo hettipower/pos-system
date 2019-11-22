@@ -121,7 +121,7 @@
                                         <label>
                                             <input type="checkbox" class="minimal percentage" checked>
                                             Use percentage
-                                        </label>
+                                        </label> 
                                     </div>
                                 </div>
 
@@ -140,7 +140,7 @@
                             <div class="panel">Upload image</div>
                             <input id="newProdPhoto" type="file" class="newImage" name="newProdPhoto">
                             <p class="help-block">Maximum size 2Mb</p>
-                            <img src="views/img/products/default/anonymous.png" class="img-thumbnail preview" alt="" width="100px">
+                            <img src="./views/img/products/default/anonymous.png" class="img-thumbnail preview" alt="" width="100px">
                         </div>
                     </div>
                 </div>
@@ -255,7 +255,7 @@ EDIT PRODUCT
                             <div class="panel">Upload Image</div>
                             <input type="file" class="newImage" name="editImage">
                             <p class="help-block">2MB max</p>
-                            <img src="views/img/products/default/anonymous.png" class="img-thumbnail preview" width="100px">
+                            <img src="./views/img/products/default/anonymous.png" class="img-thumbnail preview" width="100px">
                             <input type="hidden" name="currentImage" id="currentImage">
                         </div>
 
