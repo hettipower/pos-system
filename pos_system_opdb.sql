@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2019 at 11:51 AM
+-- Generation Time: Nov 22, 2019 at 12:26 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.1.29
 
@@ -44,6 +44,32 @@ INSERT INTO `categories` (`id`, `Category`, `Date`) VALUES
 (4, 'SCAFFOLDING', '2019-11-19 09:18:03'),
 (5, 'POWER GENERATORS', '2019-11-19 09:18:20'),
 (6, 'CONSTRUCTION EQUIPMENT', '2019-11-19 09:18:34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customers`
+--
+
+CREATE TABLE `customers` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `idDocument` int(11) NOT NULL,
+  `email` text NOT NULL,
+  `phone` text NOT NULL,
+  `address` text NOT NULL,
+  `birthdate` date NOT NULL,
+  `purchases` int(11) NOT NULL,
+  `registerDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`id`, `name`, `idDocument`, `email`, `phone`, `address`, `birthdate`, `purchases`, `registerDate`) VALUES
+(1, 'john Doe', 12345, 'john@gmail.com', '(555) 567-9999', 'evergreen terrace 1543', '1986-01-05', 0, '2019-11-22 11:25:38'),
+(2, 'Jane Doe', 123456785, 'jane@gmail.com', '(555) 789-9045', 'Carlfield 55', '1983-06-22', 0, '2019-11-22 11:26:28');
 
 -- --------------------------------------------------------
 
@@ -166,6 +192,12 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -186,6 +218,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `products`
