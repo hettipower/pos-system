@@ -78,7 +78,7 @@ class ProductsController{
 					echo'<script>
 						swal.fire({
 							  type: "success",
-							  title: "El Product ha sido guardado correctamente",
+							  title: "The Product has been saved correctly",
 							  showConfirmButton: true,
 							  confirmButtonText: "Close"
 							  }).then(function(result){
@@ -93,7 +93,7 @@ class ProductsController{
 				echo'<script>
 					swal.fire({
                         type: "error",
-                        title: "¡El Product no puede ir con los campos vacíos o llevar caracteres especiales!",
+                        title: "The Product cannot go with empty fields or carry special characters!",
                         showConfirmButton: true,
                         confirmButtonText: "Close"
                         }).then(function(result){
@@ -202,7 +202,7 @@ class ProductsController{
 				echo'<script>
 					swal.fire({
                         type: "error",
-                        title: "¡The Product cannot be empty or have special characters!",
+                        title: "The Product cannot be empty or have special characters!",
                         showConfirmButton: true,
                         confirmButtonText: "Close"
                         }).then(function(result){
@@ -232,7 +232,7 @@ class ProductsController{
 			$answer = productsModel::mdlDeleteProduct($table, $datum);
 			if($answer == "ok"){
 				echo'<script>
-				swal({
+				swal.fire({
                     type: "success",
                     title: "The Product has been successfully deleted",
                     showConfirmButton: true,

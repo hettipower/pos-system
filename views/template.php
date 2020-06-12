@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="views/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
   <!-- sweetalert2 -->
   <link rel="stylesheet" href="views/plugins/sweetalert2/sweetalert2.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="views/plugins/iCheck/all.css">
 
   <!-- jQuery 3 -->
   <script src="views/bower_components/jquery/dist/jquery.min.js"></script>
@@ -40,6 +42,12 @@
   <script src="views/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
   <!-- sweetalert2 -->
   <script src="views/plugins/sweetalert2/sweetalert2.min.js"></script>
+  <!-- iCheck 1.0.1 -->
+  <script src="views/plugins/iCheck/icheck.min.js"></script>
+  <!-- InputMask -->
+  <script src="views/plugins/input-mask/jquery.inputmask.js"></script>
+  <script src="views/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+  <script src="views/plugins/input-mask/jquery.inputmask.extensions.js"></script>
 
 </head>
 <body class="hold-transition <?php echo ( isset($_SESSION['beginSession']) && $_SESSION['beginSession'] == 'ok' ) ? 'skin-blue sidebar-collapse sidebar-mini' : 'login-page' ; ?>">
@@ -56,7 +64,7 @@
           $_GET['route'] == 'users' || 
           $_GET['route'] == 'categories' || 
           $_GET['route'] == 'products' || 
-          $_GET['route'] == 'clients' || 
+          $_GET['route'] == 'customers' || 
           $_GET['route'] == 'sales' || 
           $_GET['route'] == 'create-sales' || 
           $_GET['route'] == 'reports' ||
@@ -81,5 +89,6 @@
 <script src="views/js/template.js"></script>
 <script src="views/js/users.js"></script>
 <script src="views/js/categories.js"></script>
+<script src="views/js/products.js"></script>
 </body>
 </html>
